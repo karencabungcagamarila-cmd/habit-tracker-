@@ -1,0 +1,81 @@
+
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Welcome Page Specific Styles --- */
+#welcome-page {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffcdd2; /* Soft pink background for the landing page */
+    padding: 50px;
+    border-radius: 15px;
+}
+
+#welcome-page h1 {
+    font-size: 2.5em;
+    color: #880e4f; /* Darker pink for impact */
+    margin-bottom: 20px;
+}
+
+#welcome-page h1:hover {
+    color: red;
+    transform: scale(1.05);
+
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.2em;
+    color: red;
+}
+
+.tagline:hover {
+    color:red;
+    transform: scale(1.05);
+}
+
+.intro:hover {
+    color: red;
+    transform: scale(1.05);
+}
+
+.intro-content {
+    max-width: 600px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.primary-button {
+    /* Styles shared with #addHabitBtn for consistency */
+    padding: 15px 30px;
+    margin-top: 30px;
+    font-size: 1.1em;
+    background-color: #e91e63; /* Deep pink */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.primary-button:hover {
+    background-color: #d81b60;
+    transform: scale(1.02);
+}
+
+/* --- Habit Tracker Page (Existing styles for table, checkboxes, etc., remain) --- */
+/* ... (existing styles) ... */

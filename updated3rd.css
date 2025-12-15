@@ -1,0 +1,247 @@
+
+:root {
+    --color-background-soft: #FFEAF3; /* Lightest Pink (Header BG) */
+    --color-primary-pink: #D93B78; /* Deep Pink (Header text, Buttons, Progress) */
+    --color-card-bg: #FFFFFF; /* White card background */
+    --color-item-bg: #FFF6FA; /* Very light pink background for each item */
+    --color-success-pink: #ff69b4; /* Brighter Pink for 'done' buttons */
+    --color-text-dark: #444444;
+    --color-delete-red: #F44336;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Soft, modern font */
+    background-color: pink;
+    color: var(--color-text-dark);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+/* --- Header Styling (Based on Image 1/3) --- */
+.aesthetic-header-section {
+    width: 100%;
+    background-color: var(--color-background-soft);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header-content h1 {
+    color: var(--color-primary-pink);
+    font-size: 3.0em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h1:hover {
+    color: #C02A60;
+    transform: scale(1.05);
+}
+
+.header-content p {
+    color: var(--color-text-dark);
+    max-width: 700px;
+    margin: 10px auto;
+    font-size: 1.0em;
+}
+
+p:hover {
+    color: #FF69B4;
+    transform: scale(1.05    );
+}
+
+/* --- Dashboard Card Styling (Layout based on Image 2) --- */
+.dashboard-container {
+    padding: 20px;
+    width: 100%;
+    max-width: 800px; 
+}
+
+/*---for the center color, weekly dashbord dapit---*/
+.weekly-dashboard-card {
+    background: rgb(240, 204, 209);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+    
+}
+
+.weekly-dashboard-card h2 {
+    text-align: center;
+    color: var(--color-primary-pink);
+    margin-bottom: 25px;
+    font-weight: 1000;
+    font-size: 40px;
+}
+h2:hover {
+    color: #C02A60;
+    transform: scale(1.05);
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+
+#newHabitInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #F0C4D6; 
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#newHabitInput:focus {
+    border-color: var(--color-primary-pink);
+}
+
+#newHabitInput:hover {
+    background-color:whitesmoke;
+    transform: scale(1.05); 
+}
+
+.add-button {
+    background-color: var(--color-primary-pink);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #C02A60;
+    transform: scale(1.05); 
+}
+
+.habit-item {
+    background-color: var(--color-item-bg); 
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border: 1px solid #FFEBF3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.habit-item:hover {
+    background-color:whitesmoke;
+    transform: scale(1.05); 
+}
+
+.habit-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.habit-name {
+    font-size: 1.15em;
+    color: var(--color-text-dark);
+    margin: 0;
+    flex-grow: 1;
+}
+
+
+.delete-btn {
+    background-color: var(--color-delete-red);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.streak-counter {
+    background-color: #FFC0CB; /* Light pink badge */
+    color: var(--color-primary-pink);
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.fire-emoji {
+    margin-right: 3px;
+    font-size: 1.1em;
+}
+
+/* --- Day Buttons --- */
+.habit-tracking {
+    display: flex;
+    flex-direction: column;
+}
+
+.day-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.day-btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 1px solid #FFC0CB;
+    background-color: white;
+    color: var(--color-primary-pink);
+    cursor: pointer;
+    border-radius: 50%; /* Circular buttons */
+    font-weight: 600;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.day-btn.done {
+    background-color: var(--color-success-pink); 
+    color: white;
+    border-color: var(--color-success-pink);
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.5); /* Soft glow */
+}
+
+/* --- Progress Bar --- */
+.progress-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar-container {
+    flex-grow: 1;
+    height: 8px;
+    background-color: #FFC0CB; 
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--color-primary-pink); 
+    transition: width 0.4s ease-in-out;
+}
+
+.progress-percentage {
+    font-weight: 600;
+    color: var(--color-primary-pink);
+    font-size: 0.9em;
+    width: 40px;
+    text-align: right;
+}
